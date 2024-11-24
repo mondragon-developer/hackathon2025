@@ -1,43 +1,38 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
-  background: #1E1E4C;
+  background: #1e1e4c;
   color: white;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  justify-content: space-between; /* Ensures items are on opposite sides */
+  align-items: center; /* Vertically centers items */
 `;
 
-const Nav = styled.nav`
-  display: flex;
-  gap: 1.5rem;
+const Button = styled.a`
+  background: #ed6842;
+  color: white;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
 
-  a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: #ED6842; /* Burnt Sienna for hover effect */
-      text-decoration: underline;
-    }
+  &:hover {
+    background: #d45a2e;
   }
+`;
+
+const Logo = styled.h1`
+  font-size: 2rem;
+  margin: 0; /* Ensures no extra spacing */
 `;
 
 const Header = () => (
   <HeaderWrapper>
-    <h1>Hackathon 2025</h1>
-    <Nav>
-      <a href="#about">About</a>
-      <a href="#dates">Dates</a>
-      <a href="#register">Register</a>
-    </Nav>
+    <Logo>JLA Hackathon 2025</Logo>
+    <Button href="#register">REGISTER HERE</Button>
   </HeaderWrapper>
 );
 
