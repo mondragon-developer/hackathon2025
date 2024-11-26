@@ -16,6 +16,13 @@ const LeftSection = styled.div`
   flex: 1;
   min-width: 300px;
   text-align: center;
+  margin-top: 3rem;
+
+  img {
+    width: 150px; /* Adjust size if needed */
+    height: auto;
+    margin-bottom: 1rem;
+  800}
 
   img {
     width: 150px;
@@ -31,7 +38,7 @@ const LeftSection = styled.div`
 
   p {
     font-size: 1rem;
-    color: #6c757d;
+    color: #2c3e50; /* Darker blue tone for small text */
     margin-bottom: 1rem;
   }
 
@@ -72,24 +79,13 @@ const RightSection = styled.div`
         font-weight: bold;
         color: #ed6842;
       }
-    }
-  }
-`;
 
-const ButtonWrapper = styled.div`
-  text-align: center;
-  margin-top: 2rem;
-
-  a {
-    background: #ed6842;
-    color: white;
-    padding: 0.8rem 2rem;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-
-    &:hover {
-      background: #d45a2e;
+      &:hover {
+        background: #fdd8c1; /* Lighter orange tone */
+        color: #1e1e4c; /* Keep the text dark for contrast */
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+      }
     }
   }
 `;
@@ -98,7 +94,7 @@ const ProgramSection = () => (
   <SectionWrapper>
     {/* Left Section */}
     <LeftSection>
-      <img src={logo} alt="JLA Logo" />
+      <img src={logo} alt="JLA Logo" className="logo" />
       <h2>Thursday, February 6th, 2025</h2>
       <p>
         The JLA Hackathon is an exciting event for innovative minds to come
@@ -116,31 +112,36 @@ const ProgramSection = () => (
       <h3>PROGRAM</h3>
       <ul>
         <li>
-          <span>8:30 AM - 9:00 AM:</span> Arrival & Check-In
+          <span>8:30 AM:</span> Arrival
         </li>
         <li>
-          <span>9:15 AM - 10:30 AM:</span> Team Formation & Brainstorming
+          <span>9:00 AM:</span> Everyone Goes to the "Beit Midrash"
         </li>
         <li>
-          <span>10:30 AM - 10:40 AM:</span> Break
+          <span>9:00 AM - 9:15 AM:</span> Breakfast Carry-On
         </li>
         <li>
-          <span>10:40 AM - 12:30 PM:</span> Coding Sessions
+          <span>9:15 AM:</span> Instructions While Breakfast Finishes
         </li>
         <li>
-          <span>12:30 PM - 2:00 PM:</span> Lunch & Networking
+          <span>9:30 AM:</span> Hackathon Starts
         </li>
         <li>
-          <span>2:00 PM - 3:00 PM:</span> Project Demos & Awards Ceremony
+          <span>11:30 AM:</span> Lunch While You Code Begins
+        </li>
+        <li>
+          <span>3:00 PM:</span> Hackathon Hard Stop
+        </li>
+        <li>
+          <span>3:00 PM - 4:00 PM:</span> Judging
+        </li>
+        <li>
+          <span>4:00 PM - 4:30 PM:</span> Awards Ceremony
         </li>
       </ul>
     </RightSection>
-
-    {/* Register Button
-    <ButtonWrapper>
-      <a href="#register">REGISTER HERE</a>
-    </ButtonWrapper> */}
   </SectionWrapper>
 );
 
 export default ProgramSection;
+
